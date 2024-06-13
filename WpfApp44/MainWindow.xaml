@@ -1,0 +1,105 @@
+﻿<Window x:Class="WpfApp44.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp44"
+        mc:Ignorable="d"
+       Title="Image Gallery" Height="450" Width="800">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="Image">
+                <Setter Property="Height" Value="100"/>
+                <Setter Property="Width" Value="100"/>
+                <Style.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Height" From="100" To="150" Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" From="100" To="150" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Height" From="150" To="100" Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" From="150" To="100" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
+
+        <!-- Image 1 -->
+        <Image Source="/image1.jpg" Grid.Row="0" Grid.Column="0">
+            <Image.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="5" Opacity="0.7"/>
+            </Image.Effect>
+        </Image>
+
+        <!-- Image 2 -->
+        <Image Source="/image2.jpg" Grid.Row="0" Margin="645,308,55,26">
+            <Image.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="5" Opacity="0.7"/>
+            </Image.Effect>
+        </Image>
+
+        <!-- Image 3 -->
+        <Image Source="/image3.jpg" Grid.Column="0" Margin="645,157,55,177">
+            <Image.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="5" Opacity="0.7"/>
+            </Image.Effect>
+        </Image>
+
+        <!-- Image 4 -->
+        <Image Source="/image4.jpg" Margin="645,24,55,310">
+            <Image.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="5" Opacity="0.7"/>
+            </Image.Effect>
+        </Image>
+
+        <!-- Image 1 -->
+        <Image Source="/611803-slavnye-chifuyu-tokio-mstiteli.jpg" Grid.Row="0" Grid.Column="0" Margin="84,33,616,301">
+            <Image.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="5" Opacity="0.7"/>
+            </Image.Effect>
+        </Image>
+
+        <!-- Image 1 -->
+        <Image Source="/45c32e028f40761d8c1abf00293b4b5e.jpg" Grid.Row="0" Grid.Column="0" Margin="84,286,616,48">
+            <Image.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="5" Opacity="0.7"/>
+            </Image.Effect>
+        </Image>
+
+        <!-- Image 1 -->
+        <Image Source="/maxresdefault.jpg" Grid.Row="0" Grid.Column="0" Margin="350,305,350,29">
+            <Image.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="5" Opacity="0.7"/>
+            </Image.Effect>
+        </Image>
+
+        <!-- Image 1 -->
+        <Image Source="/3bd183c7d96fcddcfae92a1e8dc4b2db.jpg" Grid.Row="0" Grid.Column="0" Margin="84,148,616,186">
+            <Image.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="5" Opacity="0.7"/>
+            </Image.Effect>
+        </Image>
+
+        <!-- Image 1 -->
+        <Image Source="/токийские мстители  - NSFW Alphabet Baji.jpg" Grid.Row="0" Grid.Column="0" Margin="350,33,350,301">
+            <Image.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="5" Opacity="0.7"/>
+            </Image.Effect>
+        </Image>
+
+        <Button x:Name="btnLeft" Content="Rotate Left" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="btnLeft_Click"/>
+        <Button x:Name="btnRight" Content="Rotate Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="btnRight_Click"/>
+
+
+
+
+    </Grid>
+</Window>
